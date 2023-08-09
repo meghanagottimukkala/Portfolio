@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c6e3cfeac2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-regular fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm Meghana from vishakapatnam</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------about------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about me.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I'm Meghana Gottimukkala pursing final year in computer science and engineering at Vignan's Institue Of Engineering For Women.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Wed Development</span><br>Designing web app development.<br><a href="skills.html">Learn More</a></li>
+                            <li><span>Data Analytics</span><br>Analyze the data.<br><a href="skills.html">Learn More</a></li>
+                            <li><span>SQL</span><br>performing manipulation on data.<br> <a href="skills.html">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>No Experience</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>B.tech in VIEW </li>
+                            <li><span>2020</span><br>Intermediate in Narayana group of college</li>
+                            <li><span>2018</span><br>10th in Narayana high school</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------------------certificates------------------------------->
+<div id="certificates">
+    <div class="container">
+        <h1 class="sub-title">Certificates</h1>
+        <div class="certificates-list">
+            <div>
+                <h2>Essentials of Data Analyst</h2>
+                <p>This certification is provided by CISCO,in this we learnt about basics of excel,sql and tabelau</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+               <h2>Database management system</h2>
+                <p>This certification is provided by NPTEL,in this we learnt about the queries and operations using sql</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Data analytics with python</h2>
+                <p>This certification is provided by NPTEL,in this we learnt about concepts of how to perform calculation on data</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------projects----------------------------->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="project1.png"> 
+                <div class="layer">
+                    <h3>Google drive clone</h3>
+                    <p>description</p>
+                    <a href="project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div> 
+            </div>
+            <div class="project">
+                <img src="project2.png"> 
+                <div class="layer">
+                    <h3>Machine learning with python</h3>
+                    <p>description</p>
+                    <a href="project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>  
+            </div>
+            <div class="project">
+                <img src="project3.png"> 
+                <div class="layer">
+                    <h3>Distraction blocker</h3>
+                    <p>description</p>
+                    <a href="project.html"></a><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>  
+            </div>
+        </div>
+        <a href="project.html" class="btn">See more</a>
+    </div>
+</div>
+<!-------------------------------contact------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Connect with me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>meghana.g1413@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9347383292</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Meghana || 2024</p>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html> 
